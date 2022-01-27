@@ -23,6 +23,6 @@ public class BankImpl implements Bank {
     public boolean getDeposit(Client client) {
         boolean result = client.getCash() > 1000;
         LOG.info("Deposit for %s %s".formatted(client.getName(), result));
-        return client.getCash() > 1000;
+        return result;
     }
 }
