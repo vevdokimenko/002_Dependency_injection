@@ -15,7 +15,7 @@ public class Main {
 
         Bank bank = ctx.getBean("monobank", BankImpl.class);
 
-        bank.getCredit(client1);
+        bank.getCredit(client1, 50000);
         bank.getDeposit(client4);
     }
 }

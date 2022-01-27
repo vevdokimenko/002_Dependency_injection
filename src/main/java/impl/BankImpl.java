@@ -13,8 +13,10 @@ public class BankImpl implements Bank {
     private String name;
 
     @Override
-    public boolean getCredit(Client client) {
-        return false;
+    public boolean getCredit(Client client, int amount) {
+        boolean result = (client.getSalary() * 12) > amount + amount * 0.1;
+        LOG.info("Credit for %s %s".formatted(client.getName(), result));
+        return result;
     }
 
     @Override
